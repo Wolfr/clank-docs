@@ -1,0 +1,101 @@
+/* ==========================================================================
+   Loading
+   Depends on prefixfree
+   ========================================================================== */
+
+@keyframes spin {
+  0% {
+    background-color: #000;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes spin-white {
+  0% {
+    background-color: #FFF;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.cl-loading-wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: -webkit-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cl-loading {
+  position:relative;
+  width: 32px;
+  height: 32px;
+  transform:scale(0.6);
+  & > div {
+    position:absolute;
+    height: 6px;
+    width: 6px;
+    border-radius: 3px;
+    animation-name: spin;
+    animation-duration:0.88s;
+    animation-iteration-count:infinite;
+    animation-direction:linear;
+    .cl-bar-title  &,
+    .cl-bar-footer & {
+      animation-name: spin-white;
+    }
+  }
+}
+
+$i: 8;
+@while $i > 0 {
+  .cl-loading-#{$i} {
+    animation-delay: 0.11s * $i;
+  }
+  $i: $i - 1;
+}
+
+.cl-loading-1 {
+  left: 0;
+  top: 13px;
+}
+
+.cl-loading-2 {
+  left: 4px;
+  top: 4px;
+}
+
+.cl-loading-3 {
+  left: 13px;
+  top: 0;
+}
+
+.cl-loading-4 {
+  right: 4px;
+  top: 4px;
+}
+
+.cl-loading-5 {
+  right:0;
+  top: 13px;
+}
+
+.cl-loading-6{
+  right: 4px;
+  bottom: 4px;
+}
+
+.cl-loading-7 {
+  left :13px;
+  bottom:0;
+}
+
+.cl-loading-8 {
+  left: 4px;
+  bottom: 4px;
+}

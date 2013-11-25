@@ -1,0 +1,42 @@
+/**
+ * Device wraps
+ * Set this to true if you are using device frames i.e. like the demo at getclank.com
+ */
+
+$device-wraps:           true;
+
+/**
+ * Operating system defaults
+ * Used to determine the sizing of elements
+ */
+
+$ios-bar-size:           44px;
+$android-bar-size:       50px;
+
+/**
+ * Colors
+ * Quickly change the colors of your app using these variables
+ * Note that a "light text on dark background" scheme is not fully supported yet
+ */
+
+$very-light-color:       #FFF    !default;
+$light-color:            #DDD    !default;
+$medium-color:           #666    !default;
+$dark-color:             #333    !default;
+$very-dark-color:        #000    !default;
+
+$background-color:       mix($very-light-color, $light-color, 50%) !default;
+$accent-color:           #15696E !default;
+$accent-color-primary:   if(lightness($accent-color) >= 50%, scale-saturation(scale-lightness($accent-color, -25%),25%), scale-saturation(scale-lightness($accent-color, 25%),25%)) !default;
+$subtle-color:           darken($background-color, 5%) !default;
+
+/**
+ * Stylistic choices
+ * Quickly change the style of your app using these variables
+ */
+
+$functional-shadows:     true !default; // Shadows (and highlights) that are functional e.g. a drop shadow on a modal
+$decorational-shadows:   true !default; // Shadows (and highlights) that are decorational e.g. an inset on a button
+$gradient:               true !default; // Whether gradients should be rendered or not, set this to false for a flatter design
+$border-radius:          4px !default; // The radii of common borders e.g. the borders on buttons
+$text-shadows:           true !default; // Whether text should have shadows or not
