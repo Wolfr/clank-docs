@@ -1,10 +1,10 @@
-var myApp = angular.module('myApp',['ngCookies']);
+var clankDocs = angular.module('clankDocs',['ngCookies']);
 
 /**
  *  Change interpolation since it clashes with Jekyll
  */
 
-myApp.config(function($interpolateProvider) {
+clankDocs.config(function($interpolateProvider) {
   $interpolateProvider.startSymbol('{[{');
   $interpolateProvider.endSymbol('}]}');
 });

@@ -4,7 +4,7 @@
  * @return string
  */
 
-myApp.filter('removewhitespace', function () {
+clankDocs.filter('removewhitespace', function () {
   return function(text) {
     return String(text).replace(/\s/g, "");
   };
