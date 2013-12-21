@@ -42,6 +42,8 @@
         <a href="/demos/forms.html">Forms</a>
         <a href="/demos/sliders.html">Sliders</a>
         <a href="/demos/data-table.html">Data table</a>
+        <a href="/demos/popovers.html">Popovers</a>
+        <a href="/demos/tab-bar.html">Tab bar</a>
       </div>
 
       <div class="cl-docs-content" ng-show="docsVisible">
@@ -74,6 +76,11 @@
               {% include docs/components/toggles.html %}
             {% when 'loading' %}
               {% include docs/components/loading.html %}
+            {% when 'tab-bar' %}
+              {% include docs/components/tab-bar.html %}
+            {% when 'popovers' %}
+              {% include docs/components/popovers.html %}
+
             {% else %}
               <p>No documentation for this page.</p>
           {% endcase %}
