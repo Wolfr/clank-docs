@@ -1,7 +1,23 @@
 <h3 id="component-alerts">Component: popover bar</h3>
 
-<p>To implement a popover, use the following HTML.</p>
+<p>To implement a popover, there are a few moving parts. First, you need to make sure to include <a href="https://github.com/Wolfr/jquery.extendedinput">jquery.extendedinput.js</a> in your project. This is a jQuery plugin that makes it easy to toggle DOM elements using data attributes.</p>
+
+<p>After initializing the plugin, use a button in a title bar to spawn a popover:</p>
 
 {% highlight html %}
-@todo
+<a href="#" data-toggle-element="popover-context" class="cl-btn">Spawn a popover from title bar</a>
+{% endhighlight %}
+
+<p>Make sure the popover is a sibling of <code>.cl-page</code> for the correct rendering.</p>
+
+{% highlight html %}
+<div class="hide" data-element-to-be-toggled="popover-context" data-element-to-be-closed="popover-context">
+  <div class="cl-popover align-right pop-from-header">
+    <div class="cl-article padded">
+      <p>This is a popover!</p>
+      <a href="#" class="cl-btn" data-close-element="popover-context">Close</a>
+    </div>
+  </div>
+  <div class="cl-modal-backdrop"></div>
+</div>
 {% endhighlight %}

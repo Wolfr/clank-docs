@@ -1,7 +1,22 @@
 <h3 id="component-alerts">Component: tab bar</h3>
 
-<p>To implement a tab bar, use the following HTML.</p>
+<p>To implement a tab bar, use the following sample HTML. This is HTML for a tab bar with 2 items, of which the latter has a notification badge.</p>
 
 {% highlight html %}
-@todo
+<nav class="tab-bar">
+  <ul>
+    <li class="tab-item active">
+      <a href="#">
+        <span class="icon icon-app-square"></span>
+        <div class="tab-label">Tab label</div>
+      </a>
+    </li>
+    <li class="tab-item">
+      <a href="#">
+        <span class="icon icon-app-square"><span class="notification">3</span></span>
+        <div class="tab-label">Tab label</div>
+      </a>
+    </li>
+  </ul>
+</nav>
 {% endhighlight %}

@@ -473,7 +473,7 @@ body {
     ul,
     ol {
       padding: 0;
-      margin: 0;
+      margin: 0 0 12px;
       li {
         margin-left: 24px;
       }
@@ -517,6 +517,7 @@ body {
 
   // Fluid vids
   .video-wrapper {
+    margin: 0 0 12px;
     position: relative;
     padding-bottom: 66.67%; /* 3:2 */
     &.aspect-16-9 {
